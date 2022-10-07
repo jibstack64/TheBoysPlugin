@@ -1,0 +1,16 @@
+name: TheBoysPlugin
+version: '${project.version}'
+main: jib.stack64.theboysplugin.TheBoysPlugin
+api-version: 1.19
+authors: [ Isaac ]
+description: A server-side plugin adding Compound V and, hence, allowing players to gain superpowers!
+website: https://github.com/jibstack64/theboysplugin
+commands:
+  ability:
+    description: Sets your ability as the one with the identifier provided.
+    usage: /<command> <ability_id>
+    permission: theboysplugin.ability
+  toggle:
+    description: Toggles your ability.
+    usage: /<command>
+    permission: theboysplugin.toggle
