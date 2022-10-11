@@ -4,7 +4,7 @@
 
 ### A neat Minecraft spigot plugin adding compound V and a cluster of abilities from The Boys.
 
-#### My development of this plugin is **on and off**; if you wish to tip in and create a pull request, feel free to do so.
+#### My development of this plugin is *on and off*; if you wish to tip in and create a pull request, feel free to do so.
 
 ### Todo:
 - [x] Create ability system
