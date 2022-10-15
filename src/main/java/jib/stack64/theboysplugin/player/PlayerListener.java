@@ -63,6 +63,16 @@ public class PlayerListener implements Listener {
         }
     }
 
+    // Flight events
+    @EventHandler
+    public void onPlayerToggleFlight(PlayerToggleFlightEvent event) {
+        Player pl = event.getPlayer();
+        Ability ab = PlayerAbilityManager.getAbility(pl);
+        if (ab != null) {
+            ab.onToggleFlight(event);
+        }
+    }
+
     // Handles mounting events.
     @EventHandler
     public void onEntityMount(EntityMountEvent event) {

@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public class AbilityType {
     public static final Ability ATRAIN = new ATrainAbility();
+    public static final Ability HOMELANDER = new HomelanderAbility();
 
     // Finds and returns an ability by its identifier.
     public static Ability getByIdentifier(String identifier) {

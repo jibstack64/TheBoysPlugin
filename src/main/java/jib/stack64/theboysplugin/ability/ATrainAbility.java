@@ -24,10 +24,10 @@ public class ATrainAbility extends Ability {
         super.toggle(player);
         if (isToggled(player)) {
             // Do nothing (onToggleSprint handles) but play sound
-            globalSound(player, Sound.ENTITY_ALLAY_ITEM_GIVEN, 0.5F, 1.5F);
+            globalSound(player, Sound.ENTITY_ALLAY_ITEM_GIVEN, 1F, 1.5F);
         } else {
             // Remove players effects
-            globalSound(player, Sound.ENTITY_ALLAY_ITEM_TAKEN, 0.5F, 1.5F);
+            globalSound(player, Sound.ENTITY_ALLAY_ITEM_TAKEN, 1F, 1.5F);
             if (player.isSprinting()) {
                 globalSound(player, Sound.ITEM_TRIDENT_RETURN, 1.5F, 0.25F);
                 removeInfiniteEffect(player, PotionEffectType.SPEED);
@@ -51,12 +51,12 @@ public class ATrainAbility extends Ability {
         if (isToggled(pl)) {
             if (event.isSprinting()) {
                 // Create noise on player and give effects
-                globalSound(pl, Sound.ITEM_TRIDENT_RIPTIDE_3, 1.5F, 0.25F);
-                createInfiniteEffect(pl, PotionEffectType.SPEED, 15);
+                globalSound(pl, Sound.ITEM_TRIDENT_RIPTIDE_3, 0.5F, 0.5F);
+                createInfiniteEffect(pl, PotionEffectType.SPEED, 25);
                 createInfiniteEffect(pl, PotionEffectType.JUMP, 1);
             } else {
                 // Remove players effects
-                globalSound(pl, Sound.ITEM_TRIDENT_RETURN, 1.5F, 0.25F);
+                globalSound(pl, Sound.ITEM_TRIDENT_RETURN, 0.5F, 0.5F);
                 removeInfiniteEffect(pl, PotionEffectType.SPEED);
                 removeInfiniteEffect(pl, PotionEffectType.JUMP);
             }

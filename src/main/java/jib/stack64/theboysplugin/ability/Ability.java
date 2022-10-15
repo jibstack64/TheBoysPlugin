@@ -1,15 +1,9 @@
 package jib.stack64.theboysplugin.ability;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.player.PlayerEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.event.player.PlayerToggleSprintEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.spigotmc.event.entity.EntityDismountEvent;
@@ -137,12 +131,12 @@ public class Ability {
     }
 
     // A shortcut for creating and adding an infinite potion effect to a player.
-    public void createInfiniteEffect(Player player, PotionEffectType effectType, int amp) {
+    public static void createInfiniteEffect(Player player, PotionEffectType effectType, int amp) {
         player.addPotionEffect(new PotionEffect(effectType, 1000000, amp, false, false, false));
     }
 
     // A shortcut for removing an infinite effect.
-    public void removeInfiniteEffect(Player player, PotionEffectType effectType) {
+    public static void removeInfiniteEffect(Player player, PotionEffectType effectType) {
         PotionEffect curr = player.getPotionEffect(effectType);
         if (curr != null) {
             if (!curr.hasParticles() || curr.getDuration() == 1000000) {
@@ -152,12 +146,12 @@ public class Ability {
     }
 
     // A shortcut for creating particles on or around a player.
-    public void createParticles(Player player, Particle particle, int count) {
+    public static void createParticles(Player player, Particle particle, int count) {
         player.spawnParticle(particle, player.getLocation(), count);
     }
 
     // A shortcut for playing a global sound on a player.
-    public void globalSound(Player player, Sound sound, float vol, float pit) {
+    public static void globalSound(Player player, Sound sound, float vol, float pit) {
         player.getWorld().playSound(player, sound, vol, pit);
     }
 
@@ -207,6 +201,9 @@ public class Ability {
 
     // Called when the player toggles sprint.
     public void onToggleSprint(PlayerToggleSprintEvent event) {}
+
+    // Called when the player toggles flight.
+    public void onToggleFlight(PlayerToggleFlightEvent event) {}
 
     // Other events
 

@@ -12,7 +12,7 @@
 - [x] Add A-Train ability
 - [ ] Add Soldier Boy ability
 - [ ] Add Stormfront ability
-- [ ] Add Homelander ability
+- [x] Add Homelander ability
 - [ ] Add Starlight ability
 - [ ] Add Popclaw's Landlord ability ;)
 - [ ] Add Translucent ability
